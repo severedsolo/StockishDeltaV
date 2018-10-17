@@ -5,8 +5,6 @@ using System.Collections;
 using UnityEngine.Collections;
 using KSP.UI.Screens;
 
-
-
 namespace StockishDeltaV
 {
     class DeltaVTest : DesignConcernBase
@@ -15,8 +13,7 @@ namespace StockishDeltaV
         {
             //FIXME: This has the problem that when the ship gets changed, the sim needs some ticks to run again.
             //Maybe start some kind of delayed info in GameEvents.onEditorPartPlaced
-            //Waiting until the sim is ready should do the trick, but the report still doesn't update. I suspect the report only builds itself when it's drawn like PopUpDialog does.
-            //Perhaps find a way to force the window to close/reopen itself when the sim is done?
+            //isReady is only set once when the vesselDeltaV class is instantiated. SimulationRunning is always true - I don't think there is a way to make it wait until the calc is done.
             return "Atmosphere: " + Math.Round(EditorLogic.fetch.ship.vesselDeltaV.totalDeltaVASL, 0) + "m/s" + Environment.NewLine + "Vacuum:" + Math.Round(EditorLogic.fetch.ship.vesselDeltaV.totalDeltaVVac, 0) + "m/s";
         }
 
@@ -24,8 +21,7 @@ namespace StockishDeltaV
         {
             //FIXME: This has the problem that when the ship gets changed, the sim needs some ticks to run again.
             //Maybe start some kind of delayed info in GameEvents.onEditorPartPlaced
-            //Waiting until the sim is ready should do the trick, but the report still doesn't update. I suspect the report only builds itself when it's drawn like PopUpDialog does.
-            //Perhaps find a way to force the window to close/reopen itself when the sim is done?
+            //isReady is only set once when the vesselDeltaV class is instantiated. SimulationRunning is always true - I don't think there is a way to make it wait until the calc is done.
             return "Delta V: " + Math.Round(EditorLogic.fetch.ship.vesselDeltaV.totalDeltaVVac, 0) + "m/s";
         }
 
