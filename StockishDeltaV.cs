@@ -8,26 +8,12 @@ namespace StockishDeltaV
     [KSPAddon(KSPAddon.Startup.EditorAny, false)]
     public class StockishDeltaV : MonoBehaviour
     {
-        public static StockishDeltaV _instance;
         private DeltaVTest _test;
 
         void Awake()
         {
-            //Actually a overridden check for UnityNull, meaning the instance could actually be destroyed
-            //e.g. destroyed by KSP, and we're instantiating a fresh one in the same tick from some other source.
-            //Checking != null would only ensure it's NOT destroyed, but we instead need to make sure it's either null or destroyed (UnityNull)
-            if (_instance == null) 
-            {
-                _instance = this;   
-
-                //If for some reason this object gets destroyed
                 GameEvents.onGUIEngineersReportReady.Add(ReportReady);
                 GameEvents.onGUIEngineersReportDestroy.Add(ReportDestroyed);
-            }
-            else
-            {
-                Destroy(this);
-            }
         }
 
         private IEnumerator AddTest()
