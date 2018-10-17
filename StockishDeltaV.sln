@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockishDeltaV", "StockishDeltaV.csproj", "{ECAE5929-0421-47A7-9DF6-DFD112BEC127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECAE5929-0421-47A7-9DF6-DFD112BEC127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECAE5929-0421-47A7-9DF6-DFD112BEC127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECAE5929-0421-47A7-9DF6-DFD112BEC127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECAE5929-0421-47A7-9DF6-DFD112BEC127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C6184B0-84C9-4010-AC9C-D895E2756AD8}
+	EndGlobalSection
+EndGlobal
